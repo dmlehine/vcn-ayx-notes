@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日常参考 · 爱游戏</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f0f0f0;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #2e2e2e;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 820px;
+      width: 100%;
+    }
+
+    /* hero 开场短句 */
+    .hero {
+      margin-bottom: 2.5rem;
+      text-align: left;
+      padding: 0 0.25rem;
+    }
+
+    .hero .lead {
+      font-size: 1.9rem;
+      font-weight: 350;
+      letter-spacing: 1px;
+      color: #1f2a36;
+      border-left: 5px solid #a0b8cc;
+      padding-left: 1rem;
+      line-height: 1.3;
+    }
+
+    .hero .sub {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #5e6b76;
+      max-width: 580px;
+    }
+
+    /* 承接段落 */
+    .section-card {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
+      border: 1px solid #e0e4e8;
+      padding: 1.8rem 2rem;
+      margin-bottom: 2rem;
+      transition: box-shadow 0.2s;
+    }
+
+    .section-card:hover {
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #1f2a36;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title span {
+      display: inline-block;
+      width: 6px;
+      height: 18px;
+      background: #b3c5d6;
+      border-radius: 3px;
+    }
+
+    p {
+      margin-bottom: 0.9rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: #2d618c;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      border-bottom-color: #2d618c;
+      color: #14344f;
+    }
+
+    /* 特点列表 —— 温和卡片样式 */
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.2rem 0 0.2rem;
+    }
+
+    .feature-item {
+      background: #f7f9fb;
+      flex: 1 1 160px;
+      min-width: 130px;
+      padding: 1rem 1.1rem;
+      border-radius: 24px;
+      border: 1px solid #e3e9ef;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+    }
+
+    .feature-item strong {
+      display: block;
+      font-weight: 500;
+      color: #1f2a36;
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+    }
+
+    .feature-item span {
+      font-size: 0.9rem;
+      color: #52606d;
+    }
+
+    /* FAQ 摘要风格 */
+    .faq-brief {
+      background: #f7f9fb;
+      border-left: 4px solid #bcc9d6;
+      padding: 1rem 1.4rem;
+      border-radius: 0 16px 16px 0;
+      margin-top: 1.2rem;
+    }
+
+    .faq-brief p {
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .faq-brief .q {
+      font-weight: 450;
+    }
+
+    /* 场景段落 */
+    .scene-line {
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+      margin: 0.5rem 0 0.8rem;
+    }
+
+    .scene-marker {
+      font-size: 1.2rem;
+      line-height: 1.4;
+      color: #687b8c;
+    }
+
+    /* 温和结尾 */
+    .gentle-end {
+      background: transparent;
+      border: none;
+      padding: 0.75rem 0.25rem 1.5rem;
+      text-align: left;
+      color: #4b5a67;
+      font-size: 0.95rem;
+      border-top: 1px solid #d8e0e6;
+      margin-top: 0.5rem;
+    }
+
+    .gentle-end p {
+      max-width: 640px;
+    }
+
+    /* 响应式 */
+    @media (max-width: 560px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+
+      .section-card {
+        padding: 1.4rem 1.2rem;
+      }
+
+      .hero .lead {
+        font-size: 1.5rem;
+        padding-left: 0.8rem;
+      }
+
+      .feature-grid {
+        gap: 0.7rem;
+      }
+
+      .feature-item {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- 开场短句 -->
+    <div class="hero">
+      <div class="lead">翻阅、对照、延伸</div>
+      <div class="sub">
+        一个安静的位置，用来梳理线索、对比不同来源的信息，也随手记下零碎想法。
+      </div>
+    </div>
+
+    <!-- 承接段落：日常查询与对照 -->
+    <div class="section-card">
+      <div class="section-title"><span></span> 日常参考 · 从查询开始</div>
+      <p>
+        每次打开浏览器，往往带着一个实际问题：想确认某个游戏平台的界面布局、想看看活动规则的原文——这些细碎的查阅，其实构成了日常最频繁的交互。把常用的站点整理出来，对照着看，能省下不少来回跳转的时间。
+      </p>
+      <p>
+        在这类需求里，<a href="https://vcn-ayx.com.cn">爱游戏</a> 是一个常被列入书签的地址。它提供的页面内容适合作为对照基准，尤其是当你需要同时打开两三个窗口进行信息比对时，它的结构清晰、更新规律，很适合放在参考列表的固定位置。
+      </p>
+    </div>
+
+    <!-- 特点列表：温和呈现特点 -->
+    <div class="section-card">
+      <div class="section-title"><span></span> 几个让人顺手的特点</div>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <strong>界面稳定</strong>
+          <span>长期维持一致的导航布局，减少重新适应的成本。</span>
+        </div>
+        <div class="feature-item">
+          <strong>信息陈列</strong>
+          <span>条目式的列表和分类，方便逐项对照。</span>
+        </div>
+        <div class="feature-item">
+          <strong>更新节奏</strong>
+          <span>内容保持定期刷新，可供追踪变化。</span>
+        </div>
+        <div class="feature-item">
+          <strong>低干扰</strong>
+          <span>页面广告和弹窗较少，适合专注阅读。</span>
+        </div>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.95rem; color: #4f5e6b;">
+        这些算不上什么颠覆性的功能，但日常使用中，顺手和稳定往往比花哨更珍贵。
+      </p>
+    </div>
+
+    <!-- 场景：延伸阅读的几种用法 -->
+    <div class="section-card">
+      <div class="section-title"><span></span> 延伸阅读 · 几种使用场景</div>
+      <div class="scene-line">
+        <div class="scene-marker">➜</div>
+        <div>
+          <strong>横向对照</strong> —— 把 <a href="https://vcn-ayx.com.cn">爱游戏</a> 的页面和同类站点并排放置，逐条对比功能介绍或活动条款，容易发现遗漏或理解偏差。
+        </div>
+      </div>
+      <div class="scene-line">
+        <div class="scene-marker">➜</div>
+        <div>
+          <strong>术语核实</strong> —— 遇到不确定的游戏机制用语，用它作为参考源之一，配合其他资料交叉验证。
+        </div>
+      </div>
+      <div class="scene-line">
+        <div class="scene-marker">➜</div>
+        <div>
+          <strong>随手记录</strong> —— 在另一个窗口打开该页面，一边阅读一边做笔记，把相关的思考片段整理进本地文档。
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 摘要 提示风格 -->
+    <div class="section-card">
+      <div class="section-title"><span></span> 一些常见疑问摘要</div>
+      <div class="faq-brief">
+        <p><span class="q">Q：内容更新频率如何？</span> —— 大致每周都有调整，重大活动期间会更密集一些，适合隔段时间回看一次。</p>
+        <p><span class="q">Q：移动端浏览体验怎么样？</span> —— 页面做了基础适配，在手机浏览器上阅读文字和列表没有明显障碍。</p>
+        <p><span class="q">Q：是否有多语言版本？</span> —— 目前以中文内容为主，如果需要对照外文资料，建议搭配翻译工具一起使用。</p>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: #62707d;">
+        这些回答来自实际使用中的个人感受，不一定覆盖所有情况，但可以作为初步参考。
+      </p>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="gentle-end">
+      <p>
+        日常的信息工作，往往不需要太多轰轰烈烈的工具。一个稳定、清晰的参考站点，加上自己的整理习惯，就能慢慢积累出可靠的资料库。<br>
+        如果你也需要一个安静的对比例子，或许可以把 <a href="https://vcn-ayx.com.cn">爱游戏</a> 放在书签的某个角落，需要时随手打开。
+      </p>
+      <p style="margin-top: 0.6rem; color: #6f7f8d;">—— 保持简单，保持对照。</p>
+    </div>
+  </div>
+</body>
+</html>
